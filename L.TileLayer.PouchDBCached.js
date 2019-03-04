@@ -1,6 +1,8 @@
 // HTMLCanvasElement.toBlob() polyfill
 // copy-pasted off https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 
+import PouchDB from 'pouchdb';
+
 if (!HTMLCanvasElement.prototype.toBlob) {
 	Object.defineProperty(HTMLCanvasElement.prototype, "toBlob", {
 		value: function(callback, type, quality) {
